@@ -1,0 +1,25 @@
+appId: app.openbot.desktop
+productName: OpenBot
+artifactName: ${productName}-${version}-${os}-${arch}.${ext}
+directories:
+  output: release
+files:
+  - dist/**
+  - renderer/**
+  - package.json
+mac:
+  category: public.app-category.productivity
+  hardenedRuntime: true
+  # zip is the format electron-updater installs from on macOS; dmg is for first installs.
+  target: [dmg, zip]
+win:
+  target: [nsis]
+nsis:
+  oneClick: true
+linux:
+  category: Utility
+  target: [AppImage]
+# CI passes owner and repo from GITHUB_REPOSITORY, so forks publish to themselves.
+publish:
+  provider: github
+  releaseType: release

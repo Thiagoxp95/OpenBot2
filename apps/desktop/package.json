@@ -1,0 +1,25 @@
+{
+  "name": "@repo/desktop",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "productName": "OpenBot",
+  "description": "OpenBot desktop app",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsc -p tsconfig.json && electron .",
+    "dist": "tsc -p tsconfig.json && electron-builder --publish never"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.11"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^26.6.6",
+    "electron": "^45.2.0",
+    "electron-builder": "^26.18.0",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+    <title>OpenBot</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { margin: 0; height: 100vh; display: grid; place-items: center; }
+      main { text-align: center; }
+      h1 { margin: 0 0 8px; font-weight: 600; }
+      p { margin: 4px 0; opacity: 0.7; font-size: 13px; }
+      button[hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>OpenBot</h1>
+      <p id="version"></p>
+      <p id="update"></p>
+      <button id="install" hidden>Restart to update</button>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

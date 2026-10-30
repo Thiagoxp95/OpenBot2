@@ -1,0 +1,11 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+allowBuilds:
+  electron: true
+  # Squirrel.Windows; we ship NSIS instead.
+  electron-winstaller: false
+
+minimumReleaseAgeExclude:
+  - electron@45.2.0
