@@ -17,6 +17,8 @@ win:
 nsis:
   oneClick: true
 linux:
+  # Defaults to the package name, and "@repo/desktop" is not a valid file name.
+  executableName: james
   category: Utility
   target: [AppImage]
 # CI passes owner and repo from GITHUB_REPOSITORY, so forks publish to themselves.
