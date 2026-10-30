@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "productName": "OpenBot",
-  "description": "OpenBot desktop app",
+  "productName": "James",
+  "description": "James desktop app",
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",

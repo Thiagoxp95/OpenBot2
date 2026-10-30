@@ -3,7 +3,7 @@ import electron = require("electron");
 
 const { contextBridge, ipcRenderer } = electron;
 
-contextBridge.exposeInMainWorld("openbot", {
+contextBridge.exposeInMainWorld("james", {
   version: process.argv.find((arg) => arg.startsWith("--app-version="))?.slice("--app-version=".length) ?? "",
   getUpdateState: () => ipcRenderer.invoke("updates:get"),
   installUpdate: () => ipcRenderer.invoke("updates:install"),

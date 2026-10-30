@@ -18,7 +18,7 @@ function render(state) {
   installButton.hidden = state.status !== "downloaded";
 }
 
-versionLabel.textContent = `Version ${window.openbot.version}`;
-installButton.addEventListener("click", () => window.openbot.installUpdate());
-window.openbot.onUpdateState(render);
-window.openbot.getUpdateState().then(render);
+versionLabel.textContent = `Version ${window.james.version}`;
+installButton.addEventListener("click", () => window.james.installUpdate());
+window.james.onUpdateState(render);
+window.james.getUpdateState().then(render);
